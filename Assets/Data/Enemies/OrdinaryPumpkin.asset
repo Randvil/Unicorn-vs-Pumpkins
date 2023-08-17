@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3099beb916e084386650aead163315, type: 3}
+  m_Name: OrdinaryPumpkin
+  m_EditorClassIdentifier: 
+  pumpkinPrefab: {fileID: 694727449533333546, guid: 7fd8bbff58a75a744bfaddc1ecdad5a1, type: 3}
+  pumpkinType: 1
+  skinName: orange
+  speed: 1.5
+  size: 1
+  explosionColor: {r: 0.94509804, g: 0.32156864, b: 0.05882353, a: 1}
+  dropletsColor: {r: 0.90588236, g: 0.53333336, b: 0.16470589, a: 1}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8fabde15adfdff4e9aa882303c1ac6f, type: 3}
+  m_Name: Level1EnemySpawnData
+  m_EditorClassIdentifier: 
+  pumpkins:
+  - {fileID: 11400000, guid: 5859077cec15ba54d87e9d5f983a4cca, type: 2}
+  - {fileID: 11400000, guid: 5859077cec15ba54d87e9d5f983a4cca, type: 2}
+  - {fileID: 11400000, guid: 926f7f2edb0972143a1cd1f00d37c781, type: 2}
+  - {fileID: 11400000, guid: 926f7f2edb0972143a1cd1f00d37c781, type: 2}
+  - {fileID: 11400000, guid: 926f7f2edb0972143a1cd1f00d37c781, type: 2}
+  - {fileID: 11400000, guid: 330f1f2b1c981bb4dbc2fd9c79d892f3, type: 2}
+  minSpawnTime: 1
+  maxSpawnTime: 4

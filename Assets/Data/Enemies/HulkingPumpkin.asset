@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b3099beb916e084386650aead163315, type: 3}
+  m_Name: HulkingPumpkin
+  m_EditorClassIdentifier: 
+  pumpkinPrefab: {fileID: 694727449533333546, guid: 7fd8bbff58a75a744bfaddc1ecdad5a1, type: 3}
+  pumpkinType: 3
+  skinName: blue
+  speed: 1
+  size: 1.5
+  explosionColor: {r: 0, g: 0.46274513, b: 0.8196079, a: 1}
+  dropletsColor: {r: 0.40000004, g: 0.6862745, b: 1, a: 1}
