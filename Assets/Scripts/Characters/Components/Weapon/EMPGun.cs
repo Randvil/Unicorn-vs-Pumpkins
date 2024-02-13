@@ -19,16 +19,16 @@ public class EMPGun : BaseWeapon
     {
         yield return new WaitForSeconds(PreAttackDelay);
 
-        Collider2D[] attackables = Physics2D.OverlapCircleAll(target, ExplosionRadius, attackableLayers);
+        Collider2D[] attackableObjects = Physics2D.OverlapCircleAll(target, ExplosionRadius, attackableLayers);
 
-        foreach (Collider2D attackable in attackables)
+        foreach (Collider2D attackableObject in attackableObjects)
         {
-            if (faction.IsAlly(attackable))
+            if (faction.DetermineAttitude(attackableObject) != eFactionalAttitude.Enemy)
             {
                 continue;
             }
 
-            if (attackable.TryGetComponent(out IMortal mortal))
+            if (attackableObject.TryGetComponent(out IMortal mortal))
             {
                 mortal.DeathManager.Die();
             }

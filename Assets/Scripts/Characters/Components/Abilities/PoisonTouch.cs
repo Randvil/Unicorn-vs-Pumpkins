@@ -55,26 +55,25 @@ public class PoisonTouch : IAbility
     {
         ContactFilter2D filter = new();
         filter.SetLayerMask(touchableLayers);
-        Collider2D[] result = new Collider2D[100];
+        Collider2D[] touchableObjects = new Collider2D[100];
 
         while (true)
         {
-            collider.OverlapCollider(filter, result);
+            collider.OverlapCollider(filter, touchableObjects);
 
-            foreach (Collider2D enemy in result)
+            foreach (Collider2D touchableObject in touchableObjects)
             {
-                if (enemy == null)
+                if (touchableObject == null)
                 {
                     break;
                 }
 
-                if (IFaction.TryGetFaction(enemy, out IFaction enemyFaction) == false
-                    || faction.IsAlly(enemyFaction))
+                if (faction.DetermineAttitude(touchableObject) != eFactionalAttitude.Enemy)
                 {
                     continue;
                 }
 
-                if (enemy.TryGetComponent(out IMortal mortalEnemy))
+                if (touchableObject.TryGetComponent(out IMortal mortalEnemy))
                 {
                     mortalEnemy.DeathManager.Die();
                 }

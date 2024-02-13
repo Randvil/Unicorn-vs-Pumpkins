@@ -11,23 +11,31 @@ public class Faction : IFaction
         CharacterFaction = initialFaction;
     }
 
-    public bool IsAlly(IFaction faction)
+    public eFactionalAttitude DetermineAttitude(IFaction faction)
     {
+        eFactionalAttitude attitude;
+
         if (faction.CharacterFaction == CharacterFaction)
         {
-            return true;
+            attitude = eFactionalAttitude.Ally;
+        }
+        else
+        {
+            attitude = eFactionalAttitude.Enemy;
         }
 
-        return false;
+        return attitude;
     }
 
-    public bool IsAlly(Component character)
+    public eFactionalAttitude DetermineAttitude(Component character)
     {
+        eFactionalAttitude attitude = eFactionalAttitude.NoFaction;
+
         if (character.TryGetComponent(out IFactionMember factionMember))
         {
-            return IsAlly(factionMember.Faction);
+            return (DetermineAttitude(factionMember.Faction));
         }
 
-        return false;
+        return attitude;
     }
 }
